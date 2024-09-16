@@ -1,7 +1,7 @@
 resource "hcp_hvn" "vault_hvn" {
   hvn_id         = "SecureInfraOps-Project"
   cloud_provider = "aws"
-  region         = "ap-southeast-1"
+  region         = "ap-southeast-2"
   cidr_block     = "172.25.16.0/20"
 }
 
