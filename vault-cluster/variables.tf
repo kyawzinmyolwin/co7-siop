@@ -1,5 +1,5 @@
 variable "aws_region" {
   type        = string
-  description = "Test from vscode local 7th time from mbp"
+  description = "Default AWS region for vault cluster"
   default     = "ap-southeast-1"
 }
