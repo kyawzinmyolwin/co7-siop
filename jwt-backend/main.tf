@@ -86,7 +86,7 @@ resource "vault_jwt_auth_backend_role" "admin_role" {
   bound_audiences = ["vault.workload.identity"]
   bound_claims_type = "glob"
   bound_claims = {
-    sub = "organization:hc-siop2-org:project:hc-siop2-proj:workspace:*:run_phase:*"
+    sub = "organization:kz-co7-siop1:project:kz-co7-siop1-proj:workspace:*:run_phase:*"
 
   }
   user_claim      = "terraform_full_workspace"
