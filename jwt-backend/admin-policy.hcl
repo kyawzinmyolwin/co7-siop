@@ -1,14 +1,3 @@
-resource "vault_jwt_auth_backend" "jwt_auth" {
-    description         = "Terraform JWT auth backend for hc-siop2"
-    path                = "jwt"
-    oidc_discovery_url  = "https://app.terraform.io"
-    bound_issuer        = "https://app.terraform.io"
-}
-#Step-2 Create Policy
-resource "vault_policy" "admin_policy" {
-  name = "admin-policy"
-
-  policy = <<EOT
 path "auth/*" {
   capabilities = ["create", "read", "update", "delete", "list", "sudo"]
 }
@@ -73,23 +62,4 @@ path "db/" {
 
 path "db/*" {
   capabilities = ["create", "read", "update", "delete", "list", "sudo"]
-}
-EOT
-}
-
-#Step-3 Role create
-resource "vault_jwt_auth_backend_role" "admin_role" {
-  backend         = vault_jwt_auth_backend.jwt_auth.path
-  role_name       = "admin_role"
-  token_policies = [vault_policy.admin_policy.name]
-
-  bound_audiences = ["vault.workload.identity"]
-  bound_claims_type = "glob"
-  bound_claims = {
-    sub = "organization:hc-siop2-org:project:hc-siop2-proj:workspace:*:run_phase:*"
-
-  }
-  user_claim      = "terraform_full_workspace"
-  role_type       = "jwt"
-  token_ttl = 1200
 }
