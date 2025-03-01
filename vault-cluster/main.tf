@@ -1,13 +1,17 @@
-resource "hcp_hvn" "vault_hvn" {
-  hvn_id         = "SecureInfraOps-Project"
+resource "hcp_hvn" "hc_siop1_hvn" {
+  hvn_id         = "hc-siop1"
   cloud_provider = "aws"
-  region         = var.aws_region
+  region         = "ap-southeast-1"
   cidr_block     = "172.25.16.0/20"
 }
 
-resource "hcp_vault_cluster" "vault_cluster" {
-  cluster_id = "SecureInfraOps-Project-vault-cluster"
-  hvn_id     = hcp_hvn.vault_hvn.hvn_id
-  tier       = "starter_small"
+resource "hcp_vault_cluster" "cluster_setup" {
+  cluster_id = "hc-siop1-cluster"
+  hvn_id     = hcp_hvn.hc_siop1_hvn.hvn_id
+  tier       = "dev"
   public_endpoint = true
+}
+
+resource "hcp_vault_cluster_admin_token" "admin_token" {
+  cluster_id = hcp_vault_cluster.cluster_setup.cluster_id
 }
