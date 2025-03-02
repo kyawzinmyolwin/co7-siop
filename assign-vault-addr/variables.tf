@@ -1,5 +1,5 @@
 variable "tfe_token" {
-  default = "Pf6w67wqf6w4Pw.atlasv1.e1HXT6uC7VnBaG2fIIOck5d2xxdDgyM3CZuZlCz5xJkfa2aqIAnUYYzBDhQZfHC7U8E"
+  default = "ECSWEAjdSDhcPg.atlasv1.jfHtgIevqh5XUgwbBNYtBD5R2yorxYMzUbiRy6xlXh0ynZkntt4jKT3SkirRNbMfbZA"
 }
 variable "org_name" {
   default = "kz-co7-siop1"
