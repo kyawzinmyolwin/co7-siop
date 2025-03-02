@@ -4,7 +4,7 @@
 resource "tfe_workspace" "jwt_backend" {
   name         = "jwt-backend"
   organization = var.org_name
-
+  project_id = var.project_id
   auto_apply_run_trigger = true
   working_directory      = "jwt-backend"
 
