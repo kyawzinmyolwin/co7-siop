@@ -1,7 +1,27 @@
-data "tfe_workspace" "jwt_backend" {
-  name         = "jwt_backend"
-  organization = "kz-co7-sio1"
+#############################################
+#Step2-jwt-backend
+#############################################
+resource "tfe_workspace" "jwt_backend" {
+  name         = "jwt-backend"
+  organization = var.org_name
+
+  auto_apply_run_trigger = true
+  working_directory      = "jwt-backend"
+
+  vcs_repo {
+    identifier         = "kyawzinmyolwin/${var.repo_name}"
+    oauth_token_id     = var.oauth_token_id
+    branch             = "main" # Change if using a different branch
+    ingress_submodules = false
+
+  }
 }
+resource "tfe_workspace_settings" "jwt_backend" {
+  workspace_id   = tfe_workspace.jwt_backend.id
+  execution_mode = "remote"
+
+}
+
 #############################################
 #Step2 - Variables for JWT Backend
 #############################################
