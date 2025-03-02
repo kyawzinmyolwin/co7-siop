@@ -9,3 +9,14 @@ data "terraform_remote_state" "vault" {
     }
   }
 }
+data "terraform_remote_state" "jwt_backend" {
+
+  backend = "remote"
+
+  config = {
+    organization = "kz-co7-siop1"
+    workspaces = {
+      name = "jwt-backend"
+    }
+  }
+}
