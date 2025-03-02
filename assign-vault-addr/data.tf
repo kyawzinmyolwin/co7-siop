@@ -9,7 +9,3 @@ data "terraform_remote_state" "vault" {
     }
   }
 }
-data "tfe_workspace" "jwt_backend" {
-  name         = jwt_backend
-  organization = kz-co7-sio1
-}

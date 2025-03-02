@@ -1,3 +1,7 @@
+data "tfe_workspace" "jwt_backend" {
+  name         = jwt_backend
+  organization = kz-co7-sio1
+}
 #############################################
 #Step2 - Variables for JWT Backend
 #############################################
