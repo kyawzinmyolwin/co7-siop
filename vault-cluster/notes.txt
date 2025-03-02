@@ -1,5 +1,2 @@
-This is notes.
+This is notes to trigger run.
 
-HCP_CLIENT_ID = xx
-
-HCP_CLIENT_SECRET= xx
