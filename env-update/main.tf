@@ -1,5 +1,5 @@
 provider "tfe" {
-token = var.tfc_token
+# token = var.tfc_token
 }
 
 #############################################
