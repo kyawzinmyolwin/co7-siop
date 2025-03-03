@@ -7,8 +7,11 @@ variable "org_name" {
 variable "project_id" {
   default = "hc-siop2-proj"
 }
-variable "workspace_name" {
+variable "step2_jwt_backend" {
   default = "step2-jwt-backend"
+}
+variable "step3_aws_secret_backend" {
+  default = "step3-aws-secret-backend"
 }
 variable "repo_name" {
   default = "co7-siop"
