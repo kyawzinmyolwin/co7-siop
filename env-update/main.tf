@@ -1,3 +1,7 @@
+provider "tfe" {
+  token = var.tfc_token
+}
+
 #############################################
 #Variables update for JWT Backend
 #############################################
