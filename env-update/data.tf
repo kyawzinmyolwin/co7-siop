@@ -13,13 +13,13 @@ data "terraform_remote_state" "vault" {
   }
 }
 
-data "tfe_workspace" "step2_jwt_backend" {
-  name         = var.step2_jwt_backend
+data "tfe_workspace" "workspace_name" {
+  name         = var.workspace_name
   organization = var.org_name
 }
 
-data "tfe_workspace" "step3_aws_secret_backend" {
-  name         = var.step3_aws_secret_backend
-  organization = var.org_name
-}
+# data "tfe_workspace" "step3_aws_secret_backend" {
+#   name         = var.step3_aws_secret_backend
+#   organization = var.org_name
+# }
 
