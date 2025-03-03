@@ -8,7 +8,7 @@ data "terraform_remote_state" "vault" {
   config = {
     organization = "hc-siop2-org"
     workspaces = {
-      name = "step1-cluster-setup"
+      name = "step1-vault-cluster"
     }
   }
 }
