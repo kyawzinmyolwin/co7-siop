@@ -17,8 +17,8 @@ variable "oauth_token_id" { # Get from Terraform Cloud VCS provider settings
   default = "ot-g6SJWQeetz8cUzfd"
 }
 variable "vault_addr" {
-  default = "vault_addr_test_1.3"
+  default = "vault_addr_test_1.4"
 }
 variable "vault_token" {
-  default = "vault_token_test_1.3"
+  default = "vault_token_test_1.4"
 }
