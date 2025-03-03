@@ -18,8 +18,8 @@ data "tfe_workspace" "workspace_name" {
   organization = var.org_name
 }
 
-# data "tfe_workspace" "step3_aws_secret_backend" {
-#   name         = var.step3_aws_secret_backend
-#   organization = var.org_name
-# }
+data "tfe_workspace" "step3_aws_secret_backend" {
+  name         = var.step3_aws_secret_backend
+  organization = var.org_name
+}
 
