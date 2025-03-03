@@ -1,5 +1,5 @@
 variable "tfc_token" {
-  default = "yZgetwjAdwrJdQ.atlasv1.BS8tt8lVYK1IPZ2WG9VPCmPkTkylz04veNy94Ik0sFQUk3jQpjlvEKGJGwQGNEGzx5A"
+  default = ""
 }
 variable "org_name" {
   default = "hc-siop2-org"
