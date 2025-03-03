@@ -20,5 +20,5 @@ resource "tfe_variable" "vault_token" {
   value        = data.terraform_remote_state.vault.outputs.vault_admin_token
   category     = "env"
   workspace_id = data.tfe_workspace.workspace_name.id
-  sensitive    = false
+  sensitive    = true
 }
