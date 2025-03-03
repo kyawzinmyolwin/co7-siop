@@ -12,7 +12,13 @@
 #     }
 #   }
 # }
-data "tfe_workspace" "step2_jwt_backend" {
+# data "tfe_workspace" "step2_jwt_backend" {
+#   name         = var.workspace_name
+#   organization = var.org_name
+# }
+
+
+data "tfe_workspace" "workspace_name" {
   name         = var.workspace_name
   organization = var.org_name
 }

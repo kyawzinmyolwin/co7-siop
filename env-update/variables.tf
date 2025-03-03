@@ -8,7 +8,7 @@ variable "project_id" {
   default = "hc-siop2-proj"
 }
 variable "workspace_name" {
-  default = "step2-jwt-backend"
+  default = "tfe_workspace_test"
 }
 variable "repo_name" {
   default = "co7-siop"

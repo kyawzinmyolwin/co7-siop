@@ -6,7 +6,7 @@ resource "tfe_variable" "vault_addr" {
   value = var.vault_addr
   # value        = data.terraform_remote_state.vault.outputs.vault_public_endpoint_url
   category     = "env"
-  workspace_id = data.tfe_workspace.step2_jwt_backend.id
+  workspace_id = data.tfe_workspace.workspace_name.id
   sensitive    = false
 }
 
@@ -15,6 +15,6 @@ resource "tfe_variable" "vault_token" {
   value = var.vault_token
   # value        = data.terraform_remote_state.vault.outputs.vault_admin_token
   category     = "env"
-  workspace_id = data.tfe_workspace.step2_jwt_backend.id
+  workspace_id = data.tfe_workspace.workspace_name.id
   sensitive    = false
 }
