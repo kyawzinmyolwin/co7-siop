@@ -6,7 +6,7 @@ data "terraform_remote_state" "vault" {
   backend = "remote"
 
   config = {
-    organization = "kz-co7-siop1"
+    organization = "hc-siop2-org"
     workspaces = {
       name = "step1-cluster-setup"
     }
