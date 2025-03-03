@@ -1,5 +1,5 @@
 provider "tfe" {
-token = getenv("TFC_TOKEN")
+token = var.tfc_token
 }
 
 #############################################
