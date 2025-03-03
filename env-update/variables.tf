@@ -1,0 +1,18 @@
+variable "tfe_token" {
+  default = getenv("TFC_TOKEN")
+}
+variable "org_name" {
+  default = "hc-siop2-org"
+}
+variable "project_id" {
+  default = "hc-siop2-proj"
+}
+variable "workspace_name" {
+  default = "step2-jwt-backend"
+}
+variable "repo_name" {
+  default = "co7-siop"
+}
+variable "oauth_token_id" { # Get from Terraform Cloud VCS provider settings
+  default = "ot-g6SJWQeetz8cUzfd"
+}
